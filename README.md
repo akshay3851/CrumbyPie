@@ -1,2 +1,2 @@
 # CrumbyPie
-Crumby Pie static websote
+Crumby Pie static website
