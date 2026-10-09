@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+    <defs>
+        <style>
+            .brand-name {
+                font-family: 'Pacifico', cursive;
+                font-size: 120px;
+                fill: #4A2E27;
+            }
+            .tagline {
+                font-family: 'Outfit', sans-serif;
+                font-size: 26px;
+                fill: #C88752;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+            .sparkle {
+                fill: #C88752;
+            }
+        </style>
+    </defs>
+    <circle cx="400" cy="150" r="140" fill="#FFF8EF" stroke="#4A2E27" stroke-width="4" />
+    <circle cx="400" cy="150" r="130" fill="none" stroke="#4A2E27" stroke-width="2" stroke-dasharray="6 6" />
+    <path class="sparkle" d="M 230 100 Q 245 100 245 85 Q 245 100 260 100 Q 245 100 245 115 Q 245 100 230 100 Z" />
+    <path class="sparkle" d="M 550 110 Q 560 110 560 100 Q 560 110 570 110 Q 560 110 560 120 Q 560 110 550 110 Z" />
+    <path class="sparkle" d="M 530 200 Q 540 200 540 190 Q 540 200 550 200 Q 540 200 540 210 Q 540 200 530 200 Z" />
+    <text x="400" y="170" class="brand-name" text-anchor="middle">Crumbypie</text>
+    <text x="400" y="225" class="tagline" text-anchor="middle">THE SLICE OF DIVINE</text>
+    <path d="M 390 245 C 390 240 398 235 400 240 C 402 235 410 240 410 245 C 410 250 400 257 400 257 C 400 257 390 250 390 245 Z" fill="#4A2E27" />
+    <path d="M 400 55 C 400 50 408 45 410 50 C 412 45 420 50 420 55 C 420 60 410 67 410 67 C 410 67 400 60 400 55 Z" fill="#4A2E27" />
+</svg>
