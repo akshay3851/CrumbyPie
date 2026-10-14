@@ -20,7 +20,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg text-cocoa/80 max-w-lg mb-8 leading-relaxed">
-              Freshly baked, 100% eggless gourmet bento cakes, decadent truffle jars, and celebration sweets crafted with real butter and premium love. Delivered straight to your doorstep.
+              Freshly baked, 100% eggless gourmet bento cakes, decadent truffle jars, and celebration sweets crafted with real butter and premium love.
             </p>
 
             {/* Mobile Small Image Placement (Visible on mobile only between text and button) */}

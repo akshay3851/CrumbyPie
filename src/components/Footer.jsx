@@ -61,7 +61,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://wa.me/919811000000?text=Hi%20Crumbypie,%20I'd%20like%20to%20inquire%20about%20your%20menu!"
+                href="https://wa.me/919718464089?text=Hi%20Crumbypie,%20I'd%20like%20to%20place%20an%20order.%20Please%20share%20the%20menu!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-caramel text-white flex items-center justify-center hover:bg-caramel/90 transition-all shadow"
@@ -70,7 +70,7 @@ export default function Footer() {
                 <MessageCircle className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/crumby.pie?obrf=YWEzNWx1dXJnYzhu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-all"

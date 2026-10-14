@@ -1,90 +1,147 @@
-import React, { useState, useRef } from 'react';
+import React, { useMemo, useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState('All');
   const scrollContainerRef = useRef(null);
 
-  const categories = ['All', 'Bento Cakes', 'Dessert Jars', 'Mousse Cakes', 'Chocolates'];
+  const categories = ['All', 'Snacks', 'Bento Cakes', 'Jar Cakes', 'Mousse Cakes', 'Chocolates'];
 
   const products = [
     {
       id: 1,
-      name: 'Classic Truffle Bento Cake',
-      category: 'Bento Cakes',
-      price: '₹499',
-      weight: '300g (Serves 1-2)',
-      desc: 'Rich Belgian chocolate sponge layered with silky chocolate ganache in our signature bento box.',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600'
+      name: 'Samosa',
+      category: 'Snacks',
+      price: '₹20',
+      image: 'https://images.pexels.com/photos/9027521/pexels-photo-9027521.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 2,
-      name: 'Biscoff Caramel Jar',
-      category: 'Dessert Jars',
-      price: '₹349',
-      weight: '220ml',
-      desc: 'Crumbled Lotus Biscoff cookies layered with creamy white chocolate cheesecake mousse.',
-      image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=600'
+      name: 'Aloo Puff',
+      category: 'Snacks',
+      price: '₹45',
+      image: 'https://images.pexels.com/photos/19499053/pexels-photo-19499053.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 3,
-      name: 'Belgian Dark Mousse Cake',
-      category: 'Mousse Cakes',
-      price: '₹799',
-      weight: '500g',
-      desc: 'Decadent velvety dark chocolate mousse with a crispy praline base.',
-      image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=600'
+      name: 'Veg Momos',
+      category: 'Snacks',
+      price: '₹60',
+      image: 'https://images.pexels.com/photos/7918232/pexels-photo-7918232.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 4,
-      name: 'Assorted Artisan Truffles (Box of 6)',
-      category: 'Chocolates',
-      price: '₹599',
-      weight: '150g',
-      desc: 'Handcrafted bite-sized chocolate truffles infused with sea salt, hazelnut, and espresso.',
-      image: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&q=80&w=600'
+      name: 'Soya Momos',
+      category: 'Snacks',
+      price: '₹70',
+      image: 'https://images.pexels.com/photos/7918232/pexels-photo-7918232.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 5,
-      name: 'Red Velvet Mini Bento',
-      category: 'Bento Cakes',
-      price: '₹549',
+      name: 'Paneer Momos',
+      category: 'Snacks',
+      price: '₹80',
       weight: '300g (Serves 1-2)',
       desc: 'Traditional crimson cocoa sponge paired with rich cream cheese frosting.',
-      image: 'https://images.unsplash.com/photo-1586788680734-22b39f3eb36a?auto=format&fit=crop&q=80&w=600'
+      image: 'https://images.pexels.com/photos/7918232/pexels-photo-7918232.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 6,
-      name: 'Nutella Ferrero Jar',
-      category: 'Dessert Jars',
-      price: '₹399',
+      name: 'Chocolate Truffle Cake',
+      category: 'Bento Cakes',
+      price: '₹200',
       weight: '220ml',
       desc: 'Layers of Nutella ganache, chocolate sponge, and crushed roasted hazelnuts.',
-      image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&q=80&w=600'
+      image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 7,
-      name: 'Signature Hazelnut Praline Cake',
-      category: 'Mousse Cakes',
-      price: '₹899',
+      name: 'Blueberry Truffle Cake',
+      category: 'Bento Cakes',
+      price: '₹200',
       weight: '500g',
       desc: 'Roasted Piedmont hazelnuts folded into a luxurious milk chocolate mousse.',
-      image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&q=80&w=600'
+      image: 'https://images.pexels.com/photos/17561218/pexels-photo-17561218.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 8,
-      name: 'Signature Celebration Truffle Box',
-      category: 'Chocolates',
-      price: '₹999',
+      name: 'Chocolate Truffle Jar Cake',
+      category: 'Jar Cakes',
+      price: '₹200',
       weight: '300g',
       desc: 'An exquisite assortment of 12 handcrafted artisanal chocolates in a keepsake gift box.',
-      image: 'https://images.unsplash.com/photo-1526318896980-cf7b109bcef7?auto=format&fit=crop&q=80&w=600'
+      image: 'https://images.pexels.com/photos/15080943/pexels-photo-15080943.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      id: 9,
+      name: 'Blueberry Jar Cake',
+      category: 'Jar Cakes',
+      price: '₹200',
+      image: 'https://images.pexels.com/photos/14122621/pexels-photo-14122621.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      id: 10,
+      name: 'Mango Jar Cake',
+      category: 'Jar Cakes',
+      price: '₹200',
+      image: 'https://images.pexels.com/photos/12669167/pexels-photo-12669167.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      id: 11,
+      name: 'Dark Chocolate Mousse Cake',
+      category: 'Mousse Cakes',
+      price: '₹80',
+      image: 'https://images.pexels.com/photos/37189984/pexels-photo-37189984.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      id: 12,
+      name: 'Blueberry Mousse Cake',
+      category: 'Mousse Cakes',
+      price: '₹80',
+      image: 'https://images.pexels.com/photos/14122627/pexels-photo-14122627.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      id: 13,
+      name: 'Milk Chocolate',
+      category: 'Chocolates',
+      price: '₹20',
+      image: 'https://images.pexels.com/photos/4791267/pexels-photo-4791267.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      id: 14,
+      name: 'White Chocolate',
+      category: 'Chocolates',
+      price: '₹20',
+      image: 'https://images.pexels.com/photos/4791257/pexels-photo-4791257.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      id: 15,
+      name: 'Assorted Chocolates',
+      category: 'Chocolates',
+      price: '₹180',
+      image: 'https://images.pexels.com/photos/4110099/pexels-photo-4110099.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
   ];
 
+  const randomizedProducts = useMemo(() => {
+    const items = [...products];
+
+    for (let index = items.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [items[index], items[randomIndex]] = [items[randomIndex], items[index]];
+    }
+
+    return items;
+  }, []);
+
   const filteredProducts = activeCategory === 'All'
-    ? products
+    ? randomizedProducts
     : products.filter(p => p.category === activeCategory);
+
+  const selectCategory = (category) => {
+    setActiveCategory(category);
+    scrollContainerRef.current?.scrollTo({ left: 0, behavior: 'smooth' });
+  };
 
   const scroll = (direction) => {
     if (scrollContainerRef.current) {
@@ -114,7 +171,8 @@ export default function Menu() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => selectCategory(cat)}
+              aria-pressed={activeCategory === cat}
               className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm ${
                 activeCategory === cat
                   ? 'bg-cocoa text-white shadow-md'
@@ -161,23 +219,27 @@ export default function Menu() {
                     <img
                       src={product.image}
                       alt={product.name}
+                      loading="lazy"
+                      onError={(event) => {
+                        event.currentTarget.onerror = null;
+                        event.currentTarget.src = `${import.meta.env.BASE_URL}menu-placeholder.svg`;
+                      }}
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                     />
                     <span className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-cocoa text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                      {product.weight}
+                      {product.category}
                     </span>
                   </div>
                   <div className="p-5">
                     <h3 className="font-bold text-lg text-cocoa mb-1 line-clamp-1">{product.name}</h3>
-                    <p className="text-xs text-caramel font-semibold uppercase tracking-wider mb-2">{product.category}</p>
-                    <p className="text-cocoa/70 text-xs line-clamp-2 mb-4 leading-relaxed">{product.desc}</p>
+                    <p className="text-xs text-caramel font-semibold uppercase tracking-wider">Freshly made to order</p>
                   </div>
                 </div>
 
                 <div className="px-5 pb-5 pt-2 flex items-center justify-between border-t border-blush/30">
                   <span className="text-xl font-extrabold text-cocoa">{product.price}</span>
                   <a
-                    href={`https://wa.me/919811000000?text=Hi%20Crumbypie,%20I'd%20like%20to%20order%20the%20${encodeURIComponent(product.name)}%20(${product.price})`}
+                    href={`https://wa.me/919718464089?text=Hi%20Crumbypie,%20I'd%20like%20to%20order%20the%20${encodeURIComponent(product.name)}%20(${product.price})`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 bg-caramel hover:bg-caramel/90 text-white px-4 py-2 rounded-full text-xs font-medium shadow-sm transition-all"

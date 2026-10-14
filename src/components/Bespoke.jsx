@@ -18,7 +18,7 @@ export default function Bespoke() {
             <div className="absolute inset-0 bg-blush/30 rounded-3xl transform -rotate-2"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] border-4 border-white">
               <img
-                src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&q=80&w=800"
+                src="https://res.cloudinary.com/l4r81z55/image/upload/v1791996100/Gemini_Generated_Image_wlxqd8wlxqd8wlxq.png"
                 alt="Custom Celebration Cake"
                 className="w-full h-full object-cover"
               />
@@ -56,7 +56,7 @@ export default function Bespoke() {
             </div>
 
             <a
-              href="https://wa.me/919811000000?text=Hi%20Crumbypie,%20I'd%20like%20to%20discuss%20a%20custom%20bespoke%20cake%20order!"
+              href="https://wa.me/919718464089?text=Hi%20Crumbypie,%20I'd%20like%20to%20discuss%20a%20custom%20bespoke%20cake%20order!"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-caramel hover:bg-caramel/90 text-white px-8 py-4 rounded-full text-base font-semibold shadow-md hover:shadow-lg transition-all"
